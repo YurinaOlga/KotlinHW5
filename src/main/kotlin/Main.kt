@@ -8,7 +8,7 @@ data class Pool (
     val multiple: Boolean
 )
 
-class AttachmentPool (
+data class AttachmentPool (
     val pool: Pool,
     open override val type: String = "pool"
 ) : Attachments
@@ -24,7 +24,7 @@ data class Graffiti (
     val albumId: Int
 )
 
-class AttachmentGraffiti (
+data class AttachmentGraffiti (
     val graffiti: Graffiti,
     open override val type: String = "graffiti"
 ) : Attachments
@@ -39,7 +39,7 @@ data class Document (
     val albumId: Int
 )
 
-class AttachmentDocument (
+data class AttachmentDocument (
     val document: Document,
     open override val type: String = "doc"
 ) : Attachments
@@ -137,7 +137,7 @@ data class Post(
     val canPin: Boolean,
     val canDelete: Boolean,
     val likes: Likes,
-    val attachments: Attachments
+    val attachments: Array <Attachments>
 )
 
 
